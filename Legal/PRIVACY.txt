@@ -1,0 +1,17 @@
+CubeClicker 1.0 privacy information
+
+The game has no accounts, advertising, purchases, multiplayer, or game analytics.
+Progress and preferences are stored locally. Windows saves reside in the current
+player's application-data directory. Browser saves reside in that browser's
+IndexedDB storage for the hosting site. Full game and demo saves are separate.
+Clearing browser site data removes browser progress. Private browsing may not
+retain it after the session ends.
+
+GitHub Pages receives ordinary web requests when it serves the browser game.
+GitHub's hosting privacy policy applies: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+The game does not upload your save. No external fonts, analytics scripts, or
+third-party content-delivery services are requested by the game's web page.
+Unity cloud analytics, ads, purchases, and engine diagnostics are disabled.
+
+Use Settings > Reset entire save to remove in-game progression. Browser users
+can also clear site data; Windows users can remove the local save and backup.

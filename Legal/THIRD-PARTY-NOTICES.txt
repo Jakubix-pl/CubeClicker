@@ -1,0 +1,21 @@
+CubeClicker 1.0 - third-party notices
+
+CubeClicker includes the Unity Runtime and Unity-dependent packages. Unity and
+other third-party components remain copyrighted and governed by their own terms.
+Copyright notices must not be removed to make an export appear copyright-free.
+
+The Legal directory includes the installed package licenses and accompanying
+notices, built-in font licenses, and Unity license terms. Package notices are
+retained conservatively in full: some listed components are development-only
+and may be removed from a particular player by Unity's build stripping.
+
+Unity Runtime: https://unity.com/legal/editor-terms-of-service/software
+Unity Companion License: https://unity.com/legal/licenses/unity-companion-license
+Unity Package Distribution License: https://unity.com/legal/licenses/unity-package-distribution-license
+
+The original CubeClicker code and content have not been assigned an open-source
+license by this release audit. Third-party licenses do not grant rights to all
+CubeClicker source or assets. Rights in each component remain with its owners.
+
+See packages.json for installed dependency versions. The .gitignore derives
+from github/gitignore under CC0-1.0 and is a source-only development file.
