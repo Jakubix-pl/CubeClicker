@@ -1,10 +1,10 @@
 # CubeClicker 1.0
 
 Play the full game in your browser:
-https://jakubix-pl.github.io/CubeClicker-demo/
+https://jakubix-pl.github.io/CubeClicker/
 
 Download the Windows release:
-https://github.com/Jakubix-pl/CubeClicker-demo/releases/tag/v1.0
+https://github.com/Jakubix-pl/CubeClicker/releases/tag/v1.0
 
 Grow from an atom through stars, Prestige, Ascension, and beyond.
 
