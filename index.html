@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Grow a cubic universe, discover stars, and build your first galaxy. CubeClicker 1.0.">
-  <title>CubeClickerDemo · 1.0-demo</title>
+  <title>CubeClicker · 1.0</title>
   <style>
     :root{color-scheme:dark;font-family:system-ui,sans-serif;background:#070b12;color:#e6eff5}
     *{box-sizing:border-box}body{margin:0}header{height:54px;padding:10px 20px;display:flex;align-items:center;gap:18px;border-bottom:1px solid #203440}strong{color:#47e8ce;letter-spacing:.12em}header small{color:#91a7b8}button,a{font:inherit}button{border:1px solid #367468;border-radius:7px;background:#123e39;color:#80ffe2;padding:9px 20px;cursor:pointer}button:disabled{opacity:.5;cursor:wait}button:focus-visible,a:focus-visible{outline:2px solid #ffd199;outline-offset:4px}#fullscreen{margin-left:auto}a{color:#a4b6ce}main{position:relative;height:calc(100dvh - 54px);min-height:360px}canvas{width:100%;height:100%;display:block;background:#070b12}#menu{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 25%,#143641,#070b12 65%)}#menu[hidden]{display:none}.card{max-width:560px;padding:36px;text-align:center}h1{font-size:clamp(38px,7vw,68px);letter-spacing:-.04em;margin:15px 0}p{color:#aabcc9;line-height:1.65}.cube{width:74px;height:74px;margin:20px auto;border:2px solid #6affdd;box-shadow:12px 12px 0 #216a65,0 0 55px #287d73;transform:rotate(-12deg);background:repeating-linear-gradient(0deg,transparent 0 12px,#5cffc63b 12px 14px),repeating-linear-gradient(90deg,#143f3e 0 12px,#5cffc63b 12px 14px)}progress{width:100%;accent-color:#47e8ce;margin:16px 0}#status{min-height:26px}#error{color:#ffb3a6;white-space:pre-wrap}footer{margin-top:25px;font-size:12px}
@@ -20,10 +20,10 @@
   play.addEventListener('click',async()=>{
     play.disabled=true;progress.hidden=false;error.textContent='';status.textContent='Loading your universe…';
     try{
-      if(!window.createUnityInstance) await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='Build/web-demo.loader.js';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load the game. Check your connection and retry.'));document.body.appendChild(script);});
+      if(!window.createUnityInstance) await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='Build/web.loader.js';script.onload=resolve;script.onerror=()=>reject(new Error('Could not load the game. Check your connection and retry.'));document.body.appendChild(script);});
       instance=await createUnityInstance(canvas,{
-        dataUrl:'Build/web-demo.data.unityweb',frameworkUrl:'Build/web-demo.framework.js.unityweb',codeUrl:'Build/web-demo.wasm.unityweb',
-        streamingAssetsUrl:'StreamingAssets',companyName:'DefaultCompany',productName:'CubeClickerDemo',productVersion:'1.0-demo',
+        dataUrl:'Build/web.data.unityweb',frameworkUrl:'Build/web.framework.js.unityweb',codeUrl:'Build/web.wasm.unityweb',
+        streamingAssetsUrl:'StreamingAssets',companyName:'DefaultCompany',productName:'CubeClicker',productVersion:'1.0',
         autoSyncPersistentDataPath:true,matchWebGLToCanvasSize:true,devicePixelRatio:Math.min(window.devicePixelRatio||1,2),
         showBanner:(message,type)=>{if(type==='error') error.textContent=message;}
       },value=>{progress.value=value;status.textContent='Loading '+Math.round(value*100)+'%';});
@@ -36,7 +36,7 @@
     if(instance){await instance.Quit();instance=null;}
     menu.hidden=false;play.disabled=false;play.textContent='Continue playing';fullscreen.disabled=true;progress.hidden=true;status.textContent='Progress saved. You can safely close this tab.';
   });
-  if ('CubeClickerDemo' === 'CubeClickerDemo') {
+  if ('CubeClicker' === 'CubeClickerDemo') {
     document.querySelector('header strong').textContent='CUBECLICKER DEMO';
     document.querySelector('header small').textContent='1.0 · Red Dwarf demo';
     document.querySelector('h1').textContent='Your first star awaits.';
